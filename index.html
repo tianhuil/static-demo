@@ -21,51 +21,70 @@
 			<div class="col-xs-10 col-xs-offset-1">
 				<h1 class="text-center">Hello World</h1>
 
-				<h3>By employer</h3>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Company</th>
-							<th>Reponse Rate</th>
-							<th>Fellow</th>
-							<th>Emails received</th>
-							<th>Emails sent</th>
-							<th>Last email</th>
-							<th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href='company.html'>Acme Co.</a></td>
-							<td>.25</td>
-							<td>7</td>
-							<td>20</td>
-							<td>5</td>
-							<td>4 days ago</td>
-						</tr>
-						<tr>
-							<td><a href='company.html'>Acme Co. 2</a></td>
-							<td>.25</td>
-							<td>7</td>
-							<td>120</td>
-							<td>15</td>
-							<td>1 day ago</td>
-						</tr>
-						<tr>
-							<td><a href='company.html'>Acme Co. 3</a></td>
-							<td>.25</td>
-							<td>7</td>
-							<td>20</td>
-							<td>5</td>
-							<td>2 days ago</td>
-						</tr>
-					</tbody>
-				</table>
+				<h3>By Hiring Group</h3>
+				<ul class="nav nav-tabs" id="myTab">
+					<li role="presentation" class="active"><a href="#A">All Accounts</a></li>
+				  <li role="presentation"><a href="#B">Suzzie's Accounts</a></li>
+				  <li role="presentation"><a href="#C">Billy's Accounts</a></li>
+				  <li role="presentation"><a href="#D">George's Accounts</a></li>
+				</ul>
+			  <div class="tab-content">
+			    <div role="tabpanel" class="tab-pane fade in active" id="A">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Company</th>
+									<th>Reponse Rate</th>
+									<th>Fellow</th>
+									<th>Emails received</th>
+									<th>Emails sent</th>
+									<th>Last email</th>
+									<th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href='company.html'>Acme Co.</a></td>
+									<td>.25</td>
+									<td>7</td>
+									<td>20</td>
+									<td>5</td>
+									<td>4 days ago</td>
+								</tr>
+								<tr>
+									<td><a href='company.html'>Acme Co. 2</a></td>
+									<td>.25</td>
+									<td>7</td>
+									<td>120</td>
+									<td>15</td>
+									<td>1 day ago</td>
+								</tr>
+								<tr>
+									<td><a href='company.html'>Acme Co. 3</a></td>
+									<td>.25</td>
+									<td>7</td>
+									<td>20</td>
+									<td>5</td>
+									<td>2 days ago</td>
+								</tr>
+							</tbody>
+						</table>
+			    </div>
+			    <div role="tabpanel" class="tab-pane fade" id="B"><p>Coming soon ... looks like the other tabs</p></div>
+			    <div role="tabpanel" class="tab-pane fade" id="C"><p>Coming soon ... looks like the other tabs</p></div>
+			    <div role="tabpanel" class="tab-pane fade" id="D"><p>Coming soon ... looks like the other tabs</p></div>
+			  </div>
 			</div>
 		</div>
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script>
+		$('#myTab a').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+		</script>
 	</body>
 </html>
