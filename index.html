@@ -17,63 +17,304 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1">
-				<h1 class="text-center">Hello World</h1>
+		<nav class="navbar navbar-default navigation-js" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Page</a>
+			</div>
 
-				<h3>By Hiring Group</h3>
-				<ul class="nav nav-tabs" id="myTab">
-					<li role="presentation" class="active"><a href="#A">All Accounts</a></li>
-				  <li role="presentation"><a href="#B">Suzzie's Accounts</a></li>
-				  <li role="presentation"><a href="#C">Billy's Accounts</a></li>
-				  <li role="presentation"><a href="#D">George's Accounts</a></li>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li role='presentation' class='active'>
+						<a href='#companies' aria-controls="companies" role="tab" data-toggle="tab">All Hiring Groups</a>
+					</li>
+					<li role='presentation'>
+						<a href='#companies' aria-controls="companies" role="tab" data-toggle="tab">Billy's</a></li>
+					<li aria-controls="home" role="tab" data-toggle="tab">
+						<a href='#companies' aria-controls="companies" role="tab" data-toggle="tab">George's</a>
+					</li>
+					<li role='presentation'>
+						<a href='#companies' aria-controls="companies" role="tab" data-toggle="tab">Suzzie's</a>
+					</li>
+					<li role='presentation'>
+						<a href='#fellows' aria-controls="fellows" role="tab" data-toggle="tab">Fellows</a>
+					</li>
 				</ul>
-			  <div class="tab-content">
-			    <div role="tabpanel" class="tab-pane fade in active" id="A">
-						<table class="table table-hover">
-							<thead>
-								<tr>
-									<th>Company</th>
-									<th>Reponse Rate</th>
-									<th>Fellow</th>
-									<th>Emails received</th>
-									<th>Emails sent</th>
-									<th>Last email</th>
-									<th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><a href='company.html'>Acme Co.</a></td>
-									<td>.25</td>
-									<td>7</td>
-									<td>20</td>
-									<td>5</td>
-									<td>4 days ago</td>
-								</tr>
-								<tr>
-									<td><a href='company.html'>Acme Co. 2</a></td>
-									<td>.25</td>
-									<td>7</td>
-									<td>120</td>
-									<td>15</td>
-									<td>1 day ago</td>
-								</tr>
-								<tr>
-									<td><a href='company.html'>Acme Co. 3</a></td>
-									<td>.25</td>
-									<td>7</td>
-									<td>20</td>
-									<td>5</td>
-									<td>2 days ago</td>
-								</tr>
-							</tbody>
-						</table>
-			    </div>
-			    <div role="tabpanel" class="tab-pane fade" id="B"><p>Coming soon ... looks like the other tabs</p></div>
-			    <div role="tabpanel" class="tab-pane fade" id="C"><p>Coming soon ... looks like the other tabs</p></div>
-			    <div role="tabpanel" class="tab-pane fade" id="D"><p>Coming soon ... looks like the other tabs</p></div>
-			  </div>
+
+				<!-- <form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Fellow or company name">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div> --><!-- /.navbar-collapse -->
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+				  <div class="tab-content">
+				  	<!-- select * group by hiring_group [where account_manager = x]  -->
+				    <div role="tabpanel" class="tab-pane fade in active" id="companies">
+							<ol class="breadcrumb">
+							  <li class="active">All Hiring Groups [or Billy's Hiring Groups]</li>
+							</ol>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Hiring Group</th>
+										<th>Employer Response Rate</th>
+										<th>Fellow Emails</th>
+										<th>Employer Emails</th>
+										<th>Last Email</th>
+										<th>Events</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href='#fellows2' aria-controls="fellows2" role="tab" data-toggle="tab">Acme Co</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+											<p><span class="label label-primary">interview</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#fellows2' aria-controls="fellows2" role="tab" data-toggle="tab">Acme Co Sales</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>1 days ago</td>
+										<td>
+											<p><span class="label label-primary">phone screen</span> 3 days ago</p>
+											<p><span class="label label-primary">project</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#fellows2' aria-controls="fellows2" role="tab" data-toggle="tab">Acme Co Marketing</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+				    </div>
+
+				  	<!-- select * group by hiring_group [where fellow = x]  -->
+				    <div role="tabpanel" class="tab-pane fade" id="companies2">
+							<ol class="breadcrumb">
+								<li><a href='#fellows' aria-controls="fellows" role="tab" data-toggle="tab">Bob Smith</a></li>
+							  <li class="active">Hiring Groups Potentials</li>
+							</ol>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Hiring Group</th>
+										<th>Employer Response Rate</th>
+										<th>Fellow Emails</th>
+										<th>Employer Emails</th>
+										<th>Last Email</th>
+										<th>Events</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Acme Co</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+											<p><span class="label label-primary">interview</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Acme Co Sales</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>1 days ago</td>
+										<td>
+											<p><span class="label label-primary">phone screen</span> 3 days ago</p>
+											<p><span class="label label-primary">project</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Acme Co Marketing</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+				    </div>
+
+				    <!-- by fellows -->
+				    <!-- select * group by fellow [where company = x] -->
+				    <div role="tabpanel" class="tab-pane fade" id="fellows">
+							<ol class="breadcrumb">
+							  <li class="active">All Fellows</li>
+							</ol>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Fellow</th>
+										<th>Employer Response Rate</th>
+										<th>Fellow Emails</th>
+										<th>Employer Emails</th>
+										<th>Last Email</th>
+										<th>Events</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href='#companies2' aria-controls="companies2" role="tab" data-toggle="tab">Bob Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+											<p><span class="label label-primary">interview</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#companies2' aria-controls="companies2" role="tab" data-toggle="tab">Sally Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>1 days ago</td>
+										<td>
+											<p><span class="label label-primary">phone screen</span> 3 days ago</p>
+											<p><span class="label label-primary">project</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#companies2' aria-controls="companies2" role="tab" data-toggle="tab">Joe Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+				    </div>
+
+				    <!-- by fellows -->
+				    <!-- select * group by fellow [where company = x] -->
+				    <div role="tabpanel" class="tab-pane fade" id="fellows2">
+							<ol class="breadcrumb">
+							  <li><a href='#companies' aria-controls="companies" role="tab" data-toggle="tab">Acme Co's's</a></li>
+							  <li class="active">Fellow Potentials</li>
+							</ol>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Fellow</th>
+										<th>Employer Response Rate</th>
+										<th>Fellow Emails</th>
+										<th>Employer Emails</th>
+										<th>Last Email</th>
+										<th>Events</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Bob Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+											<p><span class="label label-primary">interview</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Sally Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>1 days ago</td>
+										<td>
+											<p><span class="label label-primary">phone screen</span> 3 days ago</p>
+											<p><span class="label label-primary">project</span> 2 days ago</p>
+										</td>
+									</tr>
+									<tr>
+										<td><a href='#potentials' aria-controls="potentials" role="tab" data-toggle="tab">Joe Smith</a></td>
+										<td>.25</td>
+										<td>5</td>
+										<td>10</td>
+										<td>4 days ago</td>
+										<td>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+				    </div>
+
+				    <div role="tabpanel" class="tab-pane fade" id="potentials">
+							<ol class="breadcrumb">
+							  <li><a href='#fellows2' aria-controls="fellows2" role="tab" data-toggle="tab">Acme Co's</a></li>
+							  <li><a href='#companies2' aria-controls="companies2" role="tab" data-toggle="tab">Bob Smith</a></li>
+							  <li class="active">Fellow Potentials</li>
+							</ol>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<p>
+										<span>Data Scientist position</span>
+										<span class='pull-right'>2/24/2015 2:14</span>
+									</p>
+									<p>
+										<span>From: Sally Smith  &lt;sally.smith@acmeco.com&gt;</span>
+										<span class='pull-right'>To: Bob Smith  &lt;bob.smith@gmail.com&gt;</span>
+									</p>
+								</div>
+								<div class="panel-body">
+								  Hi Bob, why don't you come in an interview tomorrow at 4PM?
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<p>
+										<span>Re: Data Scientist position</span>
+										<span class='pull-right'>2/25/2015 2:14</span>
+									</p>
+									<p>
+										<span>From: Bob Smith  &lt;bob.smith@gmail.com&gt; </span>
+										<span class='pull-right'>To: Sally Smith  &lt;sally.smith@acmeco.com&gt;</span>
+									</p>
+								</div>
+								<div class="panel-body">
+								  Hi Acme, I would love to work for you.
+								</div>
+							</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane fade" id="D">
+				    	<p>Coming soon ... looks like the other tabs</p>
+				    </div>
+				  </div>
+
+					<h2>TODOs:
+					</h2>
+					<ul>
+						<li>sortable tables</li>
+						<li>should this be angular bootstrap?</li>
+						<li>should this be angular bootstrap?</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- jQuery -->
@@ -81,7 +322,7 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script>
-		$('#myTab a').click(function (e) {
+		$('navigation-js a').click(function (e) {
 		  e.preventDefault()
 		  $(this).tab('show')
 		})
